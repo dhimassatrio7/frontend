@@ -1,0 +1,228 @@
+{
+  "jasa": [
+    {
+      "id": "1",
+      "id_penyedia": 1,
+      "kategori": "Konsultasi",
+      "nama_jasa": "Konsultasi Bisnis",
+      "deskripsi": "Konsultasi untuk pengembangan bisnis Anda.",
+      "harga": 100000,
+      "foto": "https://via.placeholder.com/150",
+      "status": "Aktif"
+    },
+    {
+      "id": "2",
+      "id_penyedia": 2,
+      "kategori": "Pelatihan",
+      "nama_jasa": "Pelatihan Silat",
+      "deskripsi": "Pelatihan untuk meningkatkan kemampuan kepemimpinan.",
+      "harga": 200000,
+      "foto": "https://via.placeholder.com/150",
+      "status": "Aktif"
+    },
+    {
+      "id": "3",
+      "id_penyedia": 3,
+      "kategori": "Desain Grafis",
+      "nama_jasa": "Desain Logo",
+      "deskripsi": "Desain logo untuk perusahaan atau usaha kecil.",
+      "harga": 500000,
+      "foto": "https://via.placeholder.com/150",
+      "status": "Aktif"
+    },
+    {
+      "id": "4",
+      "id_penyedia": 4,
+      "kategori": "Jasa Keuangan",
+      "nama_jasa": "Konsultasi Keuangan Pribadi",
+      "deskripsi": "Konsultasi untuk pengelolaan keuangan pribadi.",
+      "harga": 300000,
+      "foto": "https://via.placeholder.com/150",
+      "status": "Aktif"
+    },
+    {
+      "id": "5",
+      "id_penyedia": 5,
+      "kategori": "Pelatihan",
+      "nama_jasa": "Pelatihan Digital Marketing",
+      "deskripsi": "Pelatihan untuk meningkatkan keterampilan digital marketing Anda.",
+      "harga": 600000,
+      "foto": "https://via.placeholder.com/150",
+      "status": "Aktif"
+    },
+    {
+      "id": "6",
+      "id_penyedia": 6,
+      "kategori": "Perbaikan",
+      "nama_jasa": "Servis HP",
+      "deskripsi": "Perbaikan dan servis berbagai jenis handphone.",
+      "harga": 150000,
+      "foto": "https://via.placeholder.com/150",
+      "status": "Aktif"
+    },
+    {
+      "id": "7",
+      "id_penyedia": 7,
+      "kategori": "Jasa Hukum",
+      "nama_jasa": "Konsultasi Hukum",
+      "deskripsi": "Konsultasi hukum untuk permasalahan pribadi atau bisnis.",
+      "harga": 400000,
+      "foto": "https://via.placeholder.com/150",
+      "status": "Aktif"
+    },
+    {
+      "id": "8",
+      "id_penyedia": 8,
+      "kategori": "Fotografi",
+      "nama_jasa": "Fotografi Prewedding",
+      "deskripsi": "Jasa fotografi prewedding dengan konsep unik dan kreatif.",
+      "harga": 1200000,
+      "foto": "https://via.placeholder.com/150",
+      "status": "Aktif"
+    },
+    {
+      "id": "9",
+      "id_penyedia": 9,
+      "kategori": "Desain Grafis",
+      "nama_jasa": "Desain Website",
+      "deskripsi": "Desain website untuk bisnis atau portofolio pribadi.",
+      "harga": 800000,
+      "foto": "https://via.placeholder.com/150",
+      "status": "Aktif"
+    },
+    {
+      "id": "10",
+      "id_penyedia": 10,
+      "kategori": "Perawatan",
+      "nama_jasa": "Perawatan Mobil",
+      "deskripsi": "Perawatan berkala dan perbaikan mobil.",
+      "harga": 250000,
+      "foto": "https://via.placeholder.com/150",
+      "status": "Aktif"
+    },
+    {
+      "id": "11",
+      "id_penyedia": 11,
+      "kategori": "Konsultasi",
+      "nama_jasa": "Konsultasi Psikologi",
+      "deskripsi": "Konsultasi untuk masalah psikologi dan kesehatan mental.",
+      "harga": 350000,
+      "foto": "https://via.placeholder.com/150",
+      "status": "Aktif"
+    },
+    {
+      "id": "12",
+      "id_penyedia": 12,
+      "kategori": "Jasa Kebersihan",
+      "nama_jasa": "Cleaning Service",
+      "deskripsi": "Layanan kebersihan untuk rumah, kantor, atau tempat lainnya.",
+      "harga": 200000,
+      "foto": "https://via.placeholder.com/150",
+      "status": "Aktif"
+    }
+  ],
+  "registrations_partner": [
+    {
+      "id": "a8ac",
+      "name": "Yani skibidi",
+      "address": "2142143",
+      "age": "18",
+      "dob": "2002-02-15",
+      "location": "Jakarta Barat",
+      "whatsapp": "08123123123"
+    },
+    {
+      "id": "9197",
+      "name": "Yani skibidi",
+      "address": "2142143",
+      "age": "18",
+      "dob": "2002-02-15",
+      "location": "Jakarta Barat",
+      "whatsapp": "08123123123"
+    },
+    {
+      "id": "eee1",
+      "name": "Yani skibidi",
+      "address": "2142143",
+      "age": "18",
+      "dob": "2002-02-15",
+      "location": "Jakarta Barat",
+      "whatsapp": "08123123123"
+    },
+    {
+      "id": "7952",
+      "name": "Yani sigmaboy",
+      "address": "2142143",
+      "age": "18",
+      "dob": "2000-01-04",
+      "location": "",
+      "whatsapp": "08123123123"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1734265640885",
+      "title": "Konsultasi Hukum",
+      "price": 400000,
+      "address": "Jl. Sangkuriang",
+      "jobDetail": "Tolong bebaskan saya dari penjara",
+      "name": "Ilham",
+      "phone": "565587585858587",
+      "status": "Pesanan Selesai",
+      "date": "2024-12-15T12:27:20.885Z"
+    },
+    {
+      "id": "1734267453513",
+      "title": "Konsultasi Bisnis",
+      "price": 100000,
+      "address": "Jl.kesehatan",
+      "jobDetail": "tolong buatkan saya bisnis yang sangat untung",
+      "name": "Ilham",
+      "phone": "565587585858587",
+      "status": "Pesanan Selesai",
+      "date": "2024-12-15T12:57:33.513Z"
+    },
+    {
+      "id": "1734319203552",
+      "title": "Konsultasi Bisnis",
+      "price": 100000,
+      "address": "JL. LAWU ",
+      "jobDetail": "TOLONG BUATKAN BISNIS",
+      "name": "Ilham",
+      "phone": "565587585858587",
+      "status": "User  membatalkan pesanan",
+      "date": "2024-12-16T03:20:03.553Z"
+    },
+    {
+      "id": "1734337350165",
+      "title": "Servis HP",
+      "price": 150000,
+      "address": "Jl. Kedaun",
+      "jobDetail": "Tolong Benarkan hp saya",
+      "name": "Ilham",
+      "phone": "565587585858587",
+      "status": "Pesanan Selesai",
+      "date": "2024-12-16T08:22:30.165Z"
+    },
+    {
+      "id": "1734339816963",
+      "title": "Pelatihan Silat",
+      "price": 200000,
+      "address": "jl. lawu",
+      "jobDetail": "tolong ajari saya silat",
+      "name": "Ilham",
+      "phone": "565587585858587",
+      "status": "Pesanan Selesai",
+      "date": "2024-12-16T09:03:36.963Z"
+    }
+  ],
+  "profile": [
+    {
+      "name": "Zidan",
+      "email": "johndoe@UHUY.com",
+      "phoneNumber": "565587585858587",
+      "address": "Jl. Ahmad dahlan, Perumahan Ancar, Kelurahan Senen, Kecamatan Kranggan, Kota Tangerang.",
+      "id": "1"
+    }
+  ]
+}
