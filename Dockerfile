@@ -1,29 +1,14 @@
-# menggunakan image node.js versi terbaru
-FROM node:20-alpine AS build
-
-# membuat direktori kerja di dalam container
-WORKDIR /app
-
-# menyalin file package.json dan package-lock.json ke direktori kerja
-COPY package.json package-lock.json /app/
-
-# menginstal dependensi
-RUN npm install
-
-# menyalin seluruh konten aplikasi ke direktori kerja
-COPY . .
-
-# membangun aplikasi
-RUN npm run build
-
-# menggunakan image Nginx
+# Menggunakan Nginx untuk menyajikan file statis
 FROM nginx:alpine
 
-# menyalin hasil build aplikasi dari stage sebelumnya ke direktori default Nginx
-COPY --from=build /app/dist /usr/share/nginx/html
+# Direktori kerja dalam container
+WORKDIR /usr/share/nginx/html
 
-# ekspor port 80
+# Salin hasil build React Vite ke direktori kerja
+COPY dist/ .
+
+# Expose port 80 untuk akses HTTP
 EXPOSE 80
 
-# jalankan Nginx
+# Jalankan Nginx
 CMD ["nginx", "-g", "daemon off;"]

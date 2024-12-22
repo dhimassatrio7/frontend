@@ -6,7 +6,7 @@ import {
 } from "../../store/slices/partnerRequestSlice";
 import { fetchCategories } from "../../store/slices/categorySlice";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 const RegistrationPartner = () => {
   const dispatch = useDispatch();
@@ -34,7 +34,7 @@ const RegistrationPartner = () => {
   // Image upload function with validation
   const handleImageUpload = async (e, type) => {
     const file = e.target.files[0];
-  
+
     if (file) {
       // Validate file type and size
       const validTypes = ["image/jpeg", "image/png"];
@@ -42,22 +42,23 @@ const RegistrationPartner = () => {
         setError("Hanya file dengan format JPG atau PNG yang diperbolehkan.");
         return;
       }
-      if (file.size > 10 * 1024 * 1024) { // 10 MB limit
+      if (file.size > 10 * 1024 * 1024) {
+        // 10 MB limit
         setError("Ukuran file tidak boleh lebih dari 10 MB.");
         return;
       }
-  
+
       const formData = new FormData();
       formData.append("files", file);
-  
+
       try {
         const response = await fetch(`${import.meta.env.VITE_API_URL}/upload`, {
           method: "POST",
           body: formData, // Tidak ada header Authorization
         });
-  
+
         const result = await response.json();
-  
+
         if (result && result[0]?.id) {
           if (type === "identityCard") {
             setIdentityCard(result[0].id);
@@ -72,28 +73,28 @@ const RegistrationPartner = () => {
       }
     }
   };
-  
+
   // Handle form submission with age validation
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     // Calculate age based on the date of birth
     const today = new Date();
     const birthDate = new Date(dateOfBirth);
-    const age = today.getFullYear() - birthDate.getFullYear();
+    let age = today.getFullYear() - birthDate.getFullYear();
     const m = today.getMonth() - birthDate.getMonth();
-    
+
     // Adjust age calculation if the birthdate hasn't passed this year yet
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
       age--;
     }
-  
+
     // If the age is less than 18, show an error and prevent submission
     if (age < 18) {
       setDateError("Umur harus minimal 18 tahun.");
- return; // Stop form submission
+      return; // Stop form submission
     }
-  
+
     // Prepare data to be sent in the partner request
     const partnerRequestData = {
       data: {
@@ -116,16 +117,20 @@ const RegistrationPartner = () => {
         driving_license: drivingLicense,
       },
     };
-  
+
     // Dispatch the action to create the partner request
     try {
       await dispatch(createPartnerRequest(partnerRequestData));
       // Show confirmation alert
-      toast.success("Pendaftaran berhasil. Silakan tunggu konfirmasi dari admin.");
+      toast.success(
+        "Pendaftaran berhasil. Silakan tunggu konfirmasi dari admin."
+      );
       // Reset the form values after successful submission
       resetForm();
     } catch (error) {
-      toast.error("Terjadi kesalahan saat mengirim permintaan. Silakan coba lagi.");
+      toast.error(
+        "Terjadi kesalahan saat mengirim permintaan. Silakan coba lagi."
+      );
     }
   };
 
@@ -150,7 +155,9 @@ const RegistrationPartner = () => {
         {/* Registration Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-600">Nama</label>
+            <label className="block text-sm font-medium text-gray-600">
+              Nama
+            </label>
             <input
               type="text"
               value={name}
@@ -160,7 +167,9 @@ const RegistrationPartner = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-600">Email</label>
+            <label className="block text-sm font-medium text-gray-600">
+              Email
+            </label>
             <input
               type="email"
               value={email}
@@ -170,7 +179,9 @@ const RegistrationPartner = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-600">Alamat</label>
+            <label className="block text-sm font-medium text-gray-600">
+              Alamat
+            </label>
             <textarea
               value={address}
               onChange={(e) => setAddress(e.target.value)}
@@ -179,7 +190,9 @@ const RegistrationPartner = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-600">Tanggal Lahir</label>
+            <label className="block text-sm font-medium text-gray-600">
+              Tanggal Lahir
+            </label>
             <input
               type="date"
               value={dateOfBirth}
@@ -190,7 +203,9 @@ const RegistrationPartner = () => {
             {dateError && <p className="text-red-500 text-sm">{dateError}</p>}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-600">Kategori</label>
+            <label className="block text-sm font-medium text-gray-600">
+              Kategori
+            </label>
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
@@ -208,7 +223,9 @@ const RegistrationPartner = () => {
 
           {/* Upload Identity Card and Driving License */}
           <div>
-            <label className="block text-sm font-medium text-gray-600">Unggah Kartu Identitas</label>
+            <label className="block text-sm font-medium text-gray-600">
+              Unggah Kartu Identitas
+            </label>
             <input
               type="file"
               accept="image/*"
@@ -217,7 +234,9 @@ const RegistrationPartner = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray -600">Unggah SIM</label>
+            <label className="block text-sm font-medium text-gray -600">
+              Unggah SIM
+            </label>
             <input
               type="file"
               accept="image/*"
